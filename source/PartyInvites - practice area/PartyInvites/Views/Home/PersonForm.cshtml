@@ -1,0 +1,30 @@
+﻿@model PartyInvites.Models.Person
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PersonForm</title>
+</head>
+<body>
+    @using (@Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+        <p>Your first name: @Html.TextBoxFor(x => x.firstname)</p>
+        <p>Your last name: @Html.TextBoxFor(x => x.lastname)</p>
+        <p>Your gender: @Html.DropDownListFor(x => x.gender, new[]
+                        {
+                            new SelectListItem() {Text = "Male", Value = bool.FalseString}, 
+                            new SelectListItem() {Text = "Female", Value = bool.TrueString} 
+                        }, "Choose an option")
+        </p>
+        <p>Your birthdate: @Html.TextBoxFor(x => x.birthdate)</p>
+        <input type="submit" value="Submit Person"/>
+    }
+</body>
+</html>

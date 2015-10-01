@@ -1,0 +1,32 @@
+﻿@model PartyInvites.Models.Person
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MadePerson</title>
+</head>
+<body>
+    <div>
+        <p>First name: @Model.firstname</p>
+        <p>Last name: @Model.lastname</p>
+        <p>Gender: 
+        
+        @if ((bool) (@Model.gender = true))
+        {
+            @: Male
+        }
+        else
+        {
+            @: Female
+        }
+        </p>
+        <p>Birth date: @Model.birthdate.ToLongDateString()</p>
+    </div>
+</body>
+</html>
