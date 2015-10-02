@@ -1,0 +1,32 @@
+﻿@model PartyInvites.Models.Character
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <link href="~/Content/Site.css" rel="stylesheet" />
+        <title>CharacterForm</title>
+    </head>
+    <body>
+        @using (@Html.BeginForm())
+        {
+            @Html.ValidationSummary()
+            <p>Your name: @Html.TextBoxFor(x => x.Name)</p>
+            <p>
+                Your race: 
+                @Html.DropDownListFor(x => x.Race,
+                    new []
+                    {
+                        new SelectListItem(){Text = "Human", Value = "Human"}, 
+                        new SelectListItem() {Text = "Dog", Value = "Dog"} 
+                    }, "Select a race")
+            </p>
+            <input type="submit" value="Create Character"/>
+        }
+    </body>
+</html>

@@ -5,6 +5,7 @@ using System.Net;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
 using PartyInvites.Models;
 
 
@@ -68,6 +69,27 @@ namespace PartyInvites.Controllers
             {
                 return View("MadePerson", person);
             }
+            return View();
+        }
+
+        [HttpGet]
+        public ViewResult CharacterNameRaceForm()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult CharacterNameRaceForm(Character character)
+        {
+            if (ModelState.IsValid)
+            {
+                return View("CharacterAttributeForm",character);
+            }
+            return View();
+        }
+
+        public ViewResult CharacterAttributeForm()
+        {
             return View();
         }
     }

@@ -1,0 +1,36 @@
+﻿@model PartyInvites.Models.Character
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <script src="~/Scripts/script.js"></script>
+    <script src="~/Content/jquery-1.11.3.min.js"></script>
+    <title>CharacterAttributeForm</title>
+</head>
+    <body>
+        <header>Welcome to Character attribute creation.</header>
+        
+        <p>Character name: @Model.Name</p>
+        <p>Race Type: @Model.Race</p>
+
+        <div id="red">
+
+        </div>
+        @using (@Html.BeginForm())
+        {
+            <p>Health: @Html.TextBoxFor(x => x.derivedAttributes.Health)</p>
+            <p>Fatigue: @Html.TextBoxFor(x => x.derivedAttributes.Fatigue)</p>
+            <p>Magicka: @Html.TextBoxFor(x => x.derivedAttributes.Magicka)</p>
+            <p>Encumbrance: @Html.TextBoxFor(x => x.derivedAttributes.Encumbrance)</p>
+        }
+
+        <script src="~/Content/jquery-1.11.3.min.js"></script>
+    </body>
+</html>

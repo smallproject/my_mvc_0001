@@ -21,4 +21,5 @@ namespace PartyInvites.Models
         [Required(ErrorMessage = "Birthdate must be filled.")]
         public DateTime birthdate { get; set; }
     }
+
 }
