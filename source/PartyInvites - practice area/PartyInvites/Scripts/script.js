@@ -1,17 +1,17 @@
-﻿$(document).READY(function() {
-    $('div').MOUSEENTER(function() {
+﻿$(document).ready(function() {
+    $('div').mouseenter(function() {
         $(this).animate({
             height: '+=10px'
         });
     });
 
-    $('div').MOUSELEAVE(function() {
+    $('div').mouseleave(function() {
         $(this).animate({
             height: '-=10px'
         });
     });
 
     $('div').click(function() {
-        $(this).toggle(5000);
+        $(this).toggle(2500);
     });
 })
