@@ -114,6 +114,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Character.cs" />
+    <Compile Include="Models\Collect.cs" />
     <Compile Include="Models\GuestResponse.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -122,6 +123,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\JavaScript1.js" />
     <Content Include="Content\jquery-1.11.3.min.js" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\StyleSheet1.css" />

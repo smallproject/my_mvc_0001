@@ -27,11 +27,12 @@ namespace PartyInvites.Controllers
         //    return "Hello World";
         //}
 
-        public ViewResult Index()
+        public ActionResult Index()
         {
             int hour = DateTime.Now.Hour;
             ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
-            return View();
+            //return View();
+            return RedirectToAction("Index", "JQueryTest");
         }
 
 

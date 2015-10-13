@@ -16,7 +16,7 @@ namespace ConsoleApplication1
         [STAThread]
         static void Main(string[] args)
         {
-            PrintHelpPage();
+            Console.WriteLine(ReverseClass("jasper.villas@live.com.ph"));
         }
 
         static void webfunction()
@@ -156,5 +156,7 @@ namespace ConsoleApplication1
                 }
             }
         }
+
+
     }
 }
